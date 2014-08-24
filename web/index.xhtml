@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>            
+
+            
+            <p:tabView dynamic="true" cache="true">
+                <p:tab title="1">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <p:outputLabel value="Ejercicio No:1"/><br />
+                        <p:outputLabel value="Numero A"/><h:inputText value="#{datosFormulario.a}" />
+                        <p:outputLabel value="Numero B"/><h:inputText value="#{datosFormulario.b}" />
+                        <p:commandButton value="Enviar" update="display"/>
+                        <h:outputText id="display" value="#{datosFormulario.mayor2()}" />
+                    </h:panelGrid>
+                </p:tab>
+                <p:tab title="2">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        
+                        <p:outputLabel value="Ejercicio No:2"/><br />
+                        <p:outputLabel value="Numero A"/><h:inputText value="#{datosFormulario.a}" />
+                        <p:outputLabel value="Numero B"/><h:inputText value="#{datosFormulario.b}" />
+                        <p:outputLabel value="Numero C"/><h:inputText value="#{datosFormulario.c}" />
+                        <p:commandButton value="Enviar" update="display2"/>
+                        <h:outputText id="display2" value="#{datosFormulario.ejercicio2()}" />
+                    </h:panelGrid>
+                </p:tab>
+                <p:tab title="3">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <p:outputLabel value="Ejercicio No:3"/><br />
+                        <p:outputLabel value="Numero menor que 10"/><h:inputText value="#{datosFormulario.e}" />
+                        <p:commandButton value="Enviar" update="display3"/>
+                        <h:outputText id="display3" value="#{datosFormulario.ejercicio3()}" />
+                    </h:panelGrid>
+                </p:tab>
+                <p:tab title="4">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <p:outputLabel value="Ejercicio No:4"/><br />
+                        <p:outputLabel value="Cateto 1"/><h:inputText value="#{datosFormulario.a}" />
+                        <p:outputLabel value="Cateto 2"/><h:inputText value="#{datosFormulario.b}" />
+                        <p:commandButton value="Enviar" update="display4"/>
+                        <h:outputText id="display4" value="#{datosFormulario.ejercicio4()}" />
+                    </h:panelGrid>
+                </p:tab>
+                <p:tab title="5">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <p:outputLabel value="Ejercicio No:5"/><br />
+                        <p:outputLabel value="Radio"/><h:inputText value="#{datosFormulario.a}" />
+                        <p:outputLabel value="Altura"/><h:inputText value="#{datosFormulario.b}" />
+                        <p:commandButton value="Enviar" update="display5"/>
+                        <h:outputText id="display5" value="#{datosFormulario.ejercicio5()}" />
+                    </h:panelGrid>
+                </p:tab>
+                <p:tab title="6">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <p:outputLabel value="Ejercicio No:6"/><br />
+                        <p:outputLabel value="Numero: "/><h:inputText value="#{datosFormulario.c}" />
+                        <p:commandButton value="Enviar" update="display6"/>
+                        <h:outputText id="display6" value="#{datosFormulario.ejercicio6()}" />
+                    </h:panelGrid>
+                </p:tab>
+                <p:tab title="7">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <p:outputLabel value="Ejercicio No:7"/><br />
+                        <p:outputLabel value="Numero: "/><h:inputText value="#{datosFormulario.d}" />
+                        <p:commandButton value="Enviar" update="display7"/>
+                        <h:outputText id="display7" value="#{datosFormulario.ejercicio7()}" />
+                    </h:panelGrid>
+                </p:tab>
+            </p:tabView>
+             
+        </h:form>
+    </h:body>
+</html>
+
